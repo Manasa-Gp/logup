@@ -13,17 +13,18 @@
                 <h1 class="h3 mb-3 fw-normal">Log in</h1>
                 <p>Enter your credentials to access your account</p>
               </div>
-          <form>
+          <form method = 'POST' action="">
+            {% csrf_token %}
             <!-- Email input -->
             <div class="form-outline mb-1">
-              <input type="email" id="form1Example13" class="form-control form-control-lg" />
+              <input type="email" id="form1Example13" class="form-control form-control-lg" name = 'email' />
               <label class="form-label" for="form1Example13">Email address</label>
             </div>
   
             <!-- Password input -->
             <div class="form-outline mb-1">
-              <input type="password" id="form1Example23" class="form-control form-control-lg" />
-              <label class="form-label" for="form1Example23">Password</label>
+              <input type="password" id="form1Example23" class="form-control form-control-lg" name = 'password'/>
+              <label class="form-label" for="form1Example23 ">Password</label>
             </div>
   
             <div class="d-flex justify-content-around align-items-center mb-1">
@@ -36,7 +37,9 @@
             </div>
   
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+            <a href="{% url 'login' %}">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+            </a>
   
 
           </form>

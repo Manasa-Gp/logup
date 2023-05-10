@@ -5,3 +5,10 @@ flex: 1;
 height: 1px;
 background: #eee;
 }
+.my-custom-class {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px; /* example value */
+    box-sizing: border-box;
+  }
+  
